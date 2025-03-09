@@ -53,26 +53,11 @@ data_dir:
     type: str
     help: Where should the data be stored?
     default: ./data
-
-conf_dir:
-    type: str
-    help: Where should the configuration be stored?
-    default: ./conf
     
 network_name:
     type: str
     help: What is the name of the docker network (IPVLAN)?
     default: cloudl3net-ai2
-
-network_name_subnet_1:
-    type: str
-    help: What is the name of the docker network IP segment 1?
-    default: 192.168.23.0/24
-    
-network_name_subnet_2:
-    type: str
-    help: What is the name of the docker network IP segment 2?
-    default: 192.168.24.0/24
     
 domain_name:
     type: str
@@ -90,35 +75,6 @@ n8n_service_name:
     help: What is the n8n service name?
     default: n8n
     
-x_n8n_service_name:
-    type: str
-    when: "{{ accept_name_defaults and false }}"
-    help: What is the x-n8n service name?
-    default: x-n8n
-
-n8n_import_service_name:
-    type: str
-    when: "{{ not accept_name_defaults }}"
-    help: What is the n8n-import service name?
-    default: n8n_import
-
-flowise_service_name:
-    type: str
-    when: "{{ not accept_name_defaults }}"
-    help: What is the flowise service name?
-    default: flowise
-
-postgres_n8n_service_name:
-    type: str
-    when: "{{ not accept_name_defaults }}"
-    help: What is the postgres for N8N service name?
-    default: db_n8n
-    
-postgres_n8n_user:
-    type: str
-    when: "{{ not accept_name_defaults }}"
-    help: What is the username for N8N postgres?
-    default: postgres
     
 postgress_n8n_password:
     type: str
