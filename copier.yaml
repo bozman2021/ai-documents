@@ -74,9 +74,9 @@ mysql_password:
 
 admin_password:
    type: str
-    help: What is the password admin?
-    default: >-
-      {{ 99999999 | ans_random | hash('sha256') | regex_replace('[^A-Za-z0-9!@#$%^&*()_+=?.-]', '') | truncate(16, True) }}
+   help: What is the password admin?
+   default: >-
+     {{ 99999999 | ans_random | hash('sha256') | regex_replace('[^A-Za-z0-9!@#$%^&*()_+=?.-]', '') | truncate(16, True) }}
 
 
 
