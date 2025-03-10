@@ -43,7 +43,7 @@ services:
     environment:
       - DB_HOST=db
       - DB_ROOT_PASSWD=${MYSQL_PASSWORD}  # Required, the value should be root's password of MySQL service.
-      - TIME_ZONE=Etc/UTC+1  # Optional, default is UTC. Should be uncomment and set to your local time zone.
+      #- TIME_ZONE=Etc/UTC+1  # Optional, default is UTC. Should be uncomment and set to your local time zone.
       - SEAFILE_ADMIN_EMAIL=${SEAFILES_ADMIN_EMAIL} # Specifies Seafile admin user, default is 'me@example.com'.
       - SEAFILE_ADMIN_PASSWORD=${SEAFILES_ADMIN_PASSWORD}     # Specifies Seafile admin password, default is 'asecret'.
       - SEAFILE_SERVER_LETSENCRYPT=false   # Whether to use https or not.
